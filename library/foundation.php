@@ -352,7 +352,7 @@ function custom_breadcrumbs() {
                 $anc = array_reverse($anc);
                    
                 // Parent page loop
-                if ( !isset( $parents ) ) $parents = null;
+                if ( !isset( $parents ) ) { $parents = null;}
                 foreach ( $anc as $ancestor ) {
                     $parents .= '<li class="item-parent item-parent-' . $ancestor . '"><a class="bread-parent bread-parent-' . $ancestor . '" href="' . get_permalink($ancestor) . '" title="' . get_the_title($ancestor) . '">' . get_the_title($ancestor) . '</a></li>';
 
@@ -414,43 +414,29 @@ function custom_breadcrumbs() {
             echo '<li class="separator separator-' . get_the_time('Y') . '"> ' . $separator . ' </li>';
                
             // Month display
-            echo '<li class="item-month item-month-' . get_the_time('m') . '"><strong class="bread-month bread-month-' . get_the_time('m') . '" title="' . get_the_time('M') . '">' . get_the_time('M') . ' Archives</strong></li>';
-               
-        } else if ( is_year() ) {
-               
+            echo '<li class="item-month item-month-' . get_the_time('m') . '"><strong class="bread-month bread-month-' . get_the_time('m') . '" title="' . get_the_time('M') . '">' . get_the_time('M') . ' Archives</strong></li>';               
+        } else if ( is_year() ) {               
             // Display year archive
             echo '<li class="item-current item-current-' . get_the_time('Y') . '"><strong class="bread-current bread-current-' . get_the_time('Y') . '" title="' . get_the_time('Y') . '">' . get_the_time('Y') . ' Archives</strong></li>';
-               
-        } else if ( is_author() ) {
-               
-            // Auhor archive
-               
+        } else if ( is_author() ) {               
+            // Auhor archive               
             // Get the author information
             global $author;
-            $userdata = get_userdata( $author );
-               
+            $userdata = get_userdata( $author );               
             // Display author name
             echo '<li class="item-current item-current-' . $userdata->user_nicename . '"><strong class="bread-current bread-current-' . $userdata->user_nicename . '" title="' . $userdata->display_name . '">' . 'Author: ' . $userdata->display_name . '</strong></li>';
            
-        } else if ( get_query_var('paged') ) {
-               
+        } else if ( get_query_var('paged') ) {               
             // Paginated archives
-            echo '<li class="item-current item-current-' . get_query_var('paged') . '"><strong class="bread-current bread-current-' . get_query_var('paged') . '" title="Page ' . get_query_var('paged') . '">'.__('Page') . ' ' . get_query_var('paged') . '</strong></li>';
-               
-        } else if ( is_search() ) {
-           
+            echo '<li class="item-current item-current-' . get_query_var('paged') . '"><strong class="bread-current bread-current-' . get_query_var('paged') . '" title="Page ' . get_query_var('paged') . '">'.__('Page') . ' ' . get_query_var('paged') . '</strong></li>';               
+        } else if ( is_search() ) {           
             // Search results page
-            echo '<li class="item-current item-current-' . get_search_query() . '"><strong class="bread-current bread-current-' . get_search_query() . '" title="Search results for: ' . get_search_query() . '">Search results for: ' . get_search_query() . '</strong></li>';
-           
-        } elseif ( is_404() ) {
-               
+            echo '<li class="item-current item-current-' . get_search_query() . '"><strong class="bread-current bread-current-' . get_search_query() . '" title="Search results for: ' . get_search_query() . '">Search results for: ' . get_search_query() . '</strong></li>';           
+        } elseif ( is_404() ) {               
             // 404 page
             echo '<li>' . 'Error 404' . '</li>';
-        }
-       
-        echo '</ul>';
-           
-    }
-       
+        }       
+        echo '</ul>';           
+    }       
 }
 

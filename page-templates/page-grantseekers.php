@@ -40,9 +40,8 @@ if( !empty($image) ):
    
 </div>  -->
  
-<div class="grid-container floating-title-container" >
+<!--<div class="grid-container floating-title-container" >
     <div class="grid-x align-center align-spaced">
-
     <div class="cell small-12  ">
      
      <h1 class="about-us-title logo-3 text-center"><?php the_title(); ?></h1>
@@ -51,17 +50,17 @@ if( !empty($image) ):
 </div>
   
  <section class="grantseekers-section vertical-post gray">
-  <div class="grid-container ">
+  <div class="grid-container ">-->
     <!-- <div class="grid-x grid-padding-x align-center align">
       <div class="cell "> -->
       <!--   <div class="grid-x grid-margin-x blog-list">      -->      
-          <article id="post-<?php the_ID(); ?>" class="" itemscope="" itemtype="">
+       <!--   <article id="post-<?php the_ID(); ?>" class="" itemscope="" itemtype="">
                 <div class="grid-x grid-margin-x  align-middle align-center">
  
            
                 <div class="cell small-12 medium-4">
                   <div class="grantseekers-title">
-                    <a href="<?php echo home_url().'/grantseekers/application-process-and-forms/' ?>"> 
+                    <a href="<?php// echo home_url().'/grantseekers/application-process-and-forms/' ?>"> 
                       <h3>Application Process<br>and Report Forms</h3></a>
                   </div>
                   <div class="grantseekers-content">                   
@@ -71,7 +70,7 @@ if( !empty($image) ):
                 
                 <div class="cell small-12 medium-4">
                    <div class="grantseekers-title">
-                       <a href="<?php echo home_url().'/grantseekers/guidelines/' ?>">
+                       <a href="<?php //echo home_url().'/grantseekers/guidelines/' ?>">
                         <h3>Guidelines</h3></a>
                   </div>
                   <div class="grantseekers-content">                   
@@ -82,18 +81,17 @@ if( !empty($image) ):
              
                 <div class="cell small-12 medium-4">
                     <div class="grantseekers-title">
-                      <a href="<?php echo home_url().'/grantseekers/limitations/' ?>"> 
+                      <a href="<?php// echo home_url().'/grantseekers/limitations/' ?>"> 
                         <h3>Limitations</h3></a>
                   </div>
                     <div class="grantseekers-content">
-                   
                       <p>It has an easy to override visual style, and is appropriately subdued.</p>
-                    </div>
-                  </div>
+                      </div>
+                  </div>-->
 
                   <!--   <h3>Limitations</h3>
                      <p>The online application process is outlined to provide instructions and report forms.</p> -->
-               </div>
+              <!-- </div>
        
                                     
            
@@ -108,10 +106,10 @@ if( !empty($image) ):
 <div class="grid-container">  
 <div class="grid-x align-center">
   <div class="cell small-12">
-    <?php custom_breadcrumbs(); ?> 
+    <?php// custom_breadcrumbs(); ?> 
 
  </div>
 </div>
-</div>
+</div>-->
   
  	<?php get_footer();  

@@ -5,7 +5,7 @@ Template Name: Front
 ?>
 <?php 
 // add to remote 
-// add again
+// add againgit 
 //require($_SERVER['DOCUMENT_ROOT'].'/ArthurJordanFoundation/wp-load.php');
 ?>
 
